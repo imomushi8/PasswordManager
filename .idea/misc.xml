@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/monnh/AndroidStudioProjects/PasswordManager2/app/src/main/res/drawable/border_button.xml" value="0.1035" />
+        <entry key="..\:/Users/monnh/AndroidStudioProjects/PasswordManager2/app/src/main/res/drawable/ic_button_copy_24.xml" value="0.1035" />
+        <entry key="..\:/Users/monnh/AndroidStudioProjects/PasswordManager2/app/src/main/res/drawable/ic_copy_36.xml" value="0.1035" />
+        <entry key="..\:/Users/monnh/AndroidStudioProjects/PasswordManager2/app/src/main/res/drawable/ic_menu_analyze_24.xml" value="0.1" />
+        <entry key="..\:/Users/monnh/AndroidStudioProjects/PasswordManager2/app/src/main/res/drawable/ic_menu_home_24.xml" value="0.1" />
+        <entry key="..\:/Users/monnh/AndroidStudioProjects/PasswordManager2/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/monnh/AndroidStudioProjects/PasswordManager2/app/src/main/res/layout/content_main.xml" value="0.26992753623188404" />
+        <entry key="..\:/Users/monnh/AndroidStudioProjects/PasswordManager2/app/src/main/res/layout/fragment_analyze.xml" value="0.12760416666666666" />
+        <entry key="..\:/Users/monnh/AndroidStudioProjects/PasswordManager2/app/src/main/res/layout/fragment_edit_password.xml" value="0.26992753623188404" />
+        <entry key="..\:/Users/monnh/AndroidStudioProjects/PasswordManager2/app/src/main/res/layout/fragment_generator.xml" value="0.1274062816616008" />
+        <entry key="..\:/Users/monnh/AndroidStudioProjects/PasswordManager2/app/src/main/res/layout/fragment_home.xml" value="0.165" />
+        <entry key="..\:/Users/monnh/AndroidStudioProjects/PasswordManager2/app/src/main/res/layout/item_home_recycle.xml" value="0.13601823708206687" />
+        <entry key="..\:/Users/monnh/AndroidStudioProjects/PasswordManager2/app/src/main/res/menu/menu_edit_password.xml" value="0.2796875" />
+        <entry key="..\:/Users/monnh/AndroidStudioProjects/PasswordManager2/app/src/main/res/menu/menu_main.xml" value="0.2760416666666667" />
+        <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/drawable/ic_pulltab_24.xml" value="0.1" />
+        <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/drawable/ic_pulltab_36.xml" value="0.1" />
+        <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/drawable/ic_pulltab_48.xml" value="0.1" />
+        <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/drawable/radius_bottom_sheet.xml" value="0.1" />
+        <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/layout/fragment_analyze.xml" value="0.1" />
+        <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/layout/fragment_edit_password.xml" value="0.2296195652173913" />
+        <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/layout/fragment_generator.xml" value="0.335" />
+        <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/layout/fragment_home.xml" value="0.23596014492753623" />
+        <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/layout/item_generator_chip.xml" value="0.2796875" />
+        <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/layout/item_generator_recycle.xml" value="0.2796875" />
+        <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/layout/item_home_recycle.xml" value="0.335" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
