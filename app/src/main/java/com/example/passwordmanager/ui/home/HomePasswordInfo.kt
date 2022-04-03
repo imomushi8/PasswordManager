@@ -1,4 +1,4 @@
-package com.example.passwordmanager.data_entity
+package com.example.passwordmanager.ui.home
 
 import androidx.room.ColumnInfo
 import java.util.*

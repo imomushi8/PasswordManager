@@ -7,20 +7,30 @@
     <string name="analyze">Analyze</string>
     <string name="add_content_description">Add password information</string>
 
-    <string name="title_str">Title</string>
+    <string name="title_str">タイトル</string>
     <string name="url_str">URL</string>
-    <string name="user_id_str">User ID</string>
-    <string name="user_name_str">User Name</string>
+    <string name="user_id_str">ユーザーID</string>
+    <string name="user_name_str">ユーザー名</string>
     <string name="email_str">E-Mail</string>
-    <string name="password_str">Password</string>
-    <string name="number_password_str">Number Password</string>
-    <string name="secret_question_str">Secret Question</string>
-    <string name="secret_answer_str">Secret Answer</string>
-    <string name="use_to_e_mail_str">Use to E-Mail</string>
-    <string name="memo_str">Memo</string>
-    <string name="copy_str">Copy</string>
-    <string name="register_str">登録</string>
-    <string name="generate_pass_size_str">Number of generate password</string>
-    <string name="generate_pass_length_str">Generate password length</string>
+    <string name="password_str">パスワード</string>
+    <string name="number_password_str">パスワード(数字)</string>
+    <string name="secret_question1_str">秘密の質問1</string>
+    <string name="secret_answer1_str">秘密の質問1の回答</string>
+    <string name="secret_question2_str">秘密の質問2</string>
+    <string name="secret_answer2_str">秘密の質問2の回答</string>
+    <string name="secret_question3_str">秘密の質問3</string>
+    <string name="secret_answer3_str">秘密の質問3の回答</string>
+    <string name="use_to_e_mail_str">E-Mailを使用</string>
+    <string name="memo_str">メモ</string>
+
+    <string name="generate_pass_size_str">生成数</string>
+    <string name="generate_pass_length_str">パスワード長</string>
+
+    <string name="copy_str">コピー</string>
     <string name="generator_button_str">生成</string>
+    <string name="edit_button_str">編集</string>
+    <string name="register_str">登録</string>
+    <string name="edit_password">EditPassword</string>
+    <string name="show_password">ShowPassword</string>
+    <string name="detail">Detail</string>
 </resources>

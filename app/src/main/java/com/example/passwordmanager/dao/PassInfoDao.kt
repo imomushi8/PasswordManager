@@ -2,11 +2,10 @@ package com.example.passwordmanager.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.passwordmanager.data_entity.HomePasswordInfo
+import com.example.passwordmanager.ui.home.HomePasswordInfo
 import com.example.passwordmanager.entity.PasswordInfo
 import io.reactivex.Completable
 import io.reactivex.Single
-import java.util.*
 
 /** PasswordInfo用のDAO */
 @Dao

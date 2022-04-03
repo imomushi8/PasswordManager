@@ -3,8 +3,7 @@ package com.example.passwordmanager.entity
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.passwordmanager.data_entity.HomePasswordInfo
-import com.example.passwordmanager.databinding.FragmentEditPasswordBinding
+import com.example.passwordmanager.ui.home.HomePasswordInfo
 
 /** パスワード情報をすべて保持しているBean */
 @Entity(tableName = "password_info")
@@ -45,8 +44,5 @@ data class PasswordInfo(
             "",
             "",
             "")
-
-        /** パスワード情報の省略表記 */
-        fun omit(info: PasswordInfo) = HomePasswordInfo(info.id, info.title, info.url)
     }
 }

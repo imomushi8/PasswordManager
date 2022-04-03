@@ -1,57 +1,38 @@
 package com.example.passwordmanager.ui.edit_password
 
-import android.content.DialogInterface
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.setFragmentResultListener
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.passwordmanager.R
 import com.example.passwordmanager.base.ValidType
 import com.example.passwordmanager.base.Validator
 import com.example.passwordmanager.base.dataBinding
 import com.example.passwordmanager.databinding.FragmentEditPasswordBinding
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-/** パスワード情報編集フラグメント(BottomSheet) */
-class EditPasswordFragment: BottomSheetDialogFragment() {
+class EditPasswordFragment: Fragment(R.layout.fragment_edit_password) {
     private val viewModel by viewModels<EditPasswordViewModel>()
     private val _binding  by dataBinding<FragmentEditPasswordBinding>()
     private val  binding get() = checkNotNull(_binding)
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return inflater.inflate(R.layout.fragment_edit_password, container, false)
-    }
+    /** SafeArgsで受け取った引数 */
+    private val args: EditPasswordFragmentArgs by navArgs()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewModel.getPassInfo(args)
 
-        // 親Fragmentからのリクエストを受け取る
-        setFragmentResultListener(javaClass.name) { requestKey, bundle ->
-            if (requestKey != javaClass.name) return@setFragmentResultListener
-            viewModel.getResult(bundle)
-        }
+        val navController = findNavController()
 
         // イベント定義
         binding.run {
             vm = viewModel
-            //lifecycleOwner = viewLifecycleOwner // fragmentを使うときに渡すlifecycleはこれ
 
             // トグルスイッチの設定
             userIdSwitch  .setOnCheckedChangeListener { _, isUseFlag -> viewModel.switchUserIdFlag(userIdInput, isUseFlag) }
             userNameSwitch.setOnCheckedChangeListener { _, isUseFlag -> viewModel.switchUserNameFlag(userNameInput, isUseFlag) }
-
-            // コピペボタンの挙動 空文字をコピーしないようなってる（かしこい）
-            urlCopyButton           .setOnClickListener { viewModel.copyText("url", urlInput) }
-            userIdCopyButton        .setOnClickListener { viewModel.copyText("user_id", userIdInput) }
-            userNameCopyButton      .setOnClickListener { viewModel.copyText("user_name", userNameInput) }
-            emailCopyButton         .setOnClickListener { viewModel.copyText("e_mail", emailInput) }
-            passwordCopyButton      .setOnClickListener { viewModel.copyText("password", passwordInput) }
-            numberPasswordCopyButton.setOnClickListener { viewModel.copyText("number_password", numberPasswordInput) }
-            secretAnswer1CopyButton .setOnClickListener { viewModel.copyText("sec_ans1", secretAnswer1Input) }
-            secretAnswer2CopyButton .setOnClickListener { viewModel.copyText("sec_ans2", secretAnswer2Input) }
-            secretAnswer3CopyButton .setOnClickListener { viewModel.copyText("sec_ans3", secretAnswer3Input) }
 
             // 登録ボタン押下時のイベント
             registerButton.setOnClickListener { button ->
@@ -63,21 +44,12 @@ class EditPasswordFragment: BottomSheetDialogFragment() {
                     passwordInput to listOf(ValidType.Require)
                 )
                 if(isOk) {
-                    viewModel.register()
-                    dismissAllowingStateLoss() // このフラグメントを閉じる（データは残らない）
+                    viewModel.register(navController)
                 } else
                     button.isEnabled = true
             }
         }
-    }
 
-    override fun onDismiss(dialog: DialogInterface) {
-        super.onDismiss(dialog)
-        viewModel.initialize()
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        viewModel.initialize()
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, viewModel.backKeyPressedCallback(navController))
     }
 }

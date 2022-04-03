@@ -34,7 +34,7 @@ class EditPasswordFragment: BottomSheetDialogFragment() /* レイアウトIDを�
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         /* ViewBindingのinflateをつかわないで、inflateしている。これはOKだが、もしbindingを使っていたらエラーになる */
-        return inflater.inflate(R.layout.fragment_edit_password, container, false)
+        return inflater.inflate(R.layout.fragment_detail_password, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -4,13 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/menu_nav_graph"
-    app:startDestination="@id/navigation_home">
+    app:startDestination="@id/navigation_home_group">
 
-    <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.passwordmanager.ui.home.HomeFragment"
-        android:label="@string/home"
-        tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/navigation_pass_generator"
         android:name="com.example.passwordmanager.ui.generator.GeneratorFragment"
@@ -21,4 +16,36 @@
         android:name="com.example.passwordmanager.ui.analyze.AnalyzeFragment"
         android:label="@string/analyze"
         tools:layout="@layout/fragment_analyze" />
+
+    <navigation android:id="@+id/navigation_home_group"
+        app:startDestination="@id/navigation_home">
+        <fragment
+            android:id="@+id/navigation_home"
+            android:name="com.example.passwordmanager.ui.home.HomeFragment"
+            android:label="@string/home"
+            tools:layout="@layout/fragment_home">
+            <action
+                android:id="@+id/action_navigation_home_to_navigation_edit_password"
+                app:destination="@id/navigation_edit_password" />
+        </fragment>
+        <fragment
+            android:id="@+id/navigation_edit_password"
+            android:name="com.example.passwordmanager.ui.edit_password.EditPasswordFragment"
+            android:label="@string/edit_password"
+            tools:layout="@layout/fragment_edit_password">
+
+            <!-- SafeArgsの記述方法 -->
+            <argument
+                android:name="id"
+                app:argType="integer"
+                android:defaultValue="0" />
+
+            <action
+                android:id="@+id/action_navigation_edit_password_to_navigation_home"
+                app:destination="@id/navigation_home"
+                app:popUpTo="@id/navigation_home"
+                app:popUpToInclusive="true" />
+        </fragment>
+    </navigation>
+
 </navigation>

@@ -9,17 +9,15 @@ import kotlin.math.max
 import kotlin.math.min
 
 @SuppressLint("StaticFieldLeak")
-class HomeItemTouchHelper private constructor() : ItemTouchHelper.Callback() {
+class HomeItemTouchHelperCallback private constructor() : ItemTouchHelper.Callback() {
     companion object {
-        fun newInstance(adapter: HomeRecyclerAdapter): HomeItemTouchHelper = HomeItemTouchHelper().apply {
+        fun newInstance(): HomeItemTouchHelperCallback = HomeItemTouchHelperCallback().apply {
             mItemTouchHelper = ItemTouchHelper(this)
-            mAdapter = adapter
         }
     }
 
     /** newInstance()の中でのみ初期化している */
     private lateinit var mItemTouchHelper: ItemTouchHelper
-    private lateinit var mAdapter: HomeRecyclerAdapter
     val itemTouchHelper: ItemTouchHelper get() = mItemTouchHelper
 
     /** 現在スワイプされているholder */
@@ -112,7 +110,7 @@ class HomeItemTouchHelper private constructor() : ItemTouchHelper.Callback() {
         }
     }
 
+            fun unlockForeground() { swipedHolder = null }
     private fun lockForeground(holder: HomeViewHolder) { swipedHolder = holder }
-    private fun unlockForeground() { swipedHolder = null }
     private fun RecyclerView.ViewHolder.cast() = this as HomeViewHolder
 }

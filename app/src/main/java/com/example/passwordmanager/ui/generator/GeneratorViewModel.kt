@@ -3,6 +3,10 @@ package com.example.passwordmanager.ui.generator
 import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
+import android.view.ViewGroup
+import androidx.core.view.marginTop
+import androidx.core.view.setMargins
+import androidx.core.view.setPadding
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
@@ -64,7 +68,6 @@ class GeneratorViewModel(application: Application): AndroidViewModel(application
             chip.isChecked = chipInfo.isCheck
             chip.text = chipInfo.title
             chip.setChipBackgroundColorResource(if (chipInfo.isCheck) R.color.purple_200 else R.color.silver)
-
             chip.setOnCheckedChangeListener { _, isChecked ->
                 chipInfo.isCheck = isChecked
                 chip.setChipBackgroundColorResource(if (isChecked) R.color.purple_200 else R.color.silver)

@@ -13,17 +13,16 @@
         android:layout_weight="7"
         android:layout_margin="12dp"
         android:layout_gravity="center"
-        android:breakStrategy="simple"
-        android:textSize="18sp" />
+        android:textSize="16sp" />
 
     <ImageButton
         android:id="@+id/gen_item_copy_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="3"
         android:layout_gravity="center"
-        android:contentDescription="Copy Password"
+        android:layout_weight="3"
         android:background="@drawable/ripple_copy_button"
+        android:contentDescription="Copy Password"
         app:srcCompat="@drawable/ic_button_copy_24"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText,TouchTargetSizeCheck" />
 </LinearLayout>

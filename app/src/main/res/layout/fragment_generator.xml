@@ -7,34 +7,55 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ui.generator.GeneratorFragment">
-
-    <TextView
+    <androidx.gridlayout.widget.GridLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/generate_pass_size_str" />
+        android:layout_height="wrap_content" >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/generate_pass_size_str"
+            app:layout_row="0"
+            app:layout_column="0"
+            app:layout_columnWeight="1" />
 
-    <EditText
-        android:id="@+id/generate_pass_size_input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/generate_pass_size_str"
-        android:inputType="numberDecimal"
-        android:autofillHints="" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/generate_pass_length_str"
+            app:layout_row="0"
+            app:layout_column="1"
+            app:layout_columnWeight="1" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/generate_pass_length_str" />
+        <EditText
+            android:id="@+id/generate_pass_size_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="8"
+            android:hint="@string/generate_pass_size_str"
+            android:inputType="numberDecimal"
+            android:autofillHints=""
+            tools:ignore="HardcodedText"
+            app:layout_row="1"
+            app:layout_column="0"
+            app:layout_columnWeight="1" />
 
-    <EditText
-        android:id="@+id/generate_pass_length_input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/generate_pass_length_str"
-        android:inputType="numberDecimal"
-        android:autofillHints="" />
+        <EditText
+            android:id="@+id/generate_pass_length_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:text="16"
+            android:hint="@string/generate_pass_length_str"
+            android:inputType="numberDecimal"
+            android:autofillHints=""
+            tools:ignore="HardcodedText"
+            app:layout_row="1"
+            app:layout_column="1"
+            app:layout_columnWeight="1" />
+    </androidx.gridlayout.widget.GridLayout>
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/generator_chip_group"
@@ -47,11 +68,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:text="@string/generator_button_str" />
+        android:layout_marginBottom="1dp"
+        android:text="@string/generator_button_str"
+        tools:ignore="RtlHardcoded" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/generate_password_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="wrap_content" />
 </LinearLayout>

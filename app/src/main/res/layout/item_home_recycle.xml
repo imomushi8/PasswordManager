@@ -19,7 +19,7 @@
 
         <ImageButton
             android:id="@+id/home_item_delete_button"
-            android:src="@drawable/ic_delete_24"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -28,40 +28,44 @@
             android:paddingStart="24dp"
             android:paddingEnd="24dp"
             android:scaleType="center"
+            android:src="@drawable/ic_delete_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ContentDescription,SpeakableTextPresentCheck"
-            style="@style/Widget.AppCompat.Button.Borderless" />
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
     </FrameLayout>
 
     <!-- password_list(RecyclerView)の表示アイテム用のレイアウト -->
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:id="@+id/home_item_foreground"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
-        android:orientation="vertical"
-        android:padding="10dp"
-        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/home_item_site_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="0dp">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textSize="20sp" />
+            android:padding="10dp"
+            android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/home_item_url"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textSize="15sp" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/home_item_site_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/home_item_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

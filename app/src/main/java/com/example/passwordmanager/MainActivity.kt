@@ -1,6 +1,7 @@
 package com.example.passwordmanager
 
 import android.os.Bundle
+import androidx.activity.OnBackPressedCallback
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -23,9 +24,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //_binding = ActivityMainBinding.inflate(layoutInflater)
-        //setContentView(binding.root)
-
         /*
         ・ナビゲーションコントローラはどういう風にフラグメントを遷移させるかを操作するもの。
         　　activityのlayoutにnavHostFragmentを追加する必要あり
