@@ -22,8 +22,12 @@
         <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/drawable/ic_pulltab_36.xml" value="0.1" />
         <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/drawable/ic_pulltab_48.xml" value="0.1" />
         <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/drawable/radius_bottom_sheet.xml" value="0.1" />
-        <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/layout/activity_main.xml" value="0.13072916666666667" />
+        <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/layout/activity_main.xml" value="0.335" />
+        <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/layout/activity_option.xml" value="0.1956521739130435" />
+        <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/layout/content_option.xml" value="0.1956521739130435" />
         <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/layout/fragment_analyze.xml" value="0.1" />
+        <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/layout/fragment_csv_download.xml" value="0.1956521739130435" />
+        <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/layout/fragment_csv_upload.xml" value="0.25" />
         <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/layout/fragment_detail_password.xml" value="0.25" />
         <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/layout/fragment_edit_password.xml" value="0.1935483870967742" />
         <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/layout/fragment_generator.xml" value="0.375" />
@@ -33,6 +37,7 @@
         <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/layout/item_generator_recycle.xml" value="0.24120603015075376" />
         <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/layout/item_home_recycle.xml" value="0.335" />
         <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/menu/menu_main.xml" value="0.1265625" />
+        <entry key="..\:/workspace_AndroidStudio/PasswordManager2/app/src/main/res/menu/menu_setting.xml" value="0.2760416666666667" />
       </map>
     </option>
   </component>

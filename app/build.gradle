@@ -75,7 +75,9 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxkotlin:2.2.0'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.9'
 
+    /* その他 */
     implementation "io.insert-koin:koin-android:3.1.2"
+    implementation 'com.github.doyaaaaaken:kotlin-csv-jvm:1.1.0'
 
     /* Test modules */
     testImplementation 'junit:junit:4.13.2'

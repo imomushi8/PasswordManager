@@ -3,7 +3,6 @@ package com.example.passwordmanager.entity
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.passwordmanager.ui.home.HomePasswordInfo
 
 /** パスワード情報をすべて保持しているBean */
 @Entity(tableName = "password_info")
@@ -44,5 +43,39 @@ data class PasswordInfo(
             "",
             "",
             "")
+
+        val csvHeader = listOf(listOf(
+            "title",
+            "url",
+            "user_id",
+            "user_name",
+            "e_mail",
+            "password",
+            "number_password",
+            "secret_question1",
+            "secret_answer1",
+            "secret_question2",
+            "secret_answer2",
+            "secret_question3",
+            "secret_answer3",
+            "memo"
+            ))
+
+        fun toCsv(passInfo: PasswordInfo): List<String> = listOf(
+            passInfo.title,
+            passInfo.url ?: "",
+            passInfo.user_id ?: "",
+            passInfo.user_name ?: "",
+            passInfo.e_mail ?: "",
+            passInfo.password,
+            passInfo.number_password ?: "",
+            passInfo.secret_question1 ?: "",
+            passInfo.secret_answer1 ?: "",
+            passInfo.secret_question2 ?: "",
+            passInfo.secret_answer2 ?: "",
+            passInfo.secret_question3 ?: "",
+            passInfo.secret_answer3 ?: "",
+            passInfo.memo ?: ""
+        )
     }
 }

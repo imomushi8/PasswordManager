@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setting_nav_graph"
+    app:startDestination="@id/navigation_csv_upload">
+
+    <fragment
+        android:id="@+id/navigation_csv_upload"
+        android:name="com.example.passwordmanager.ui.csv_upload.CsvUploadFragment"
+        android:label="@string/csv_upload_str"
+        tools:layout="@layout/fragment_csv_upload" />
+
+    <fragment
+        android:id="@+id/navigation_csv_download"
+        android:name="com.example.passwordmanager.ui.csv_download.CsvDownloadFragment"
+        android:label="@string/csv_download_str"
+        tools:layout="@layout/fragment_csv_download" />
+</navigation>

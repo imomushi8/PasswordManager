@@ -10,13 +10,13 @@ import io.reactivex.Single
 /** PasswordInfo用のDAO */
 @Dao
 interface PassInfoDao {
-    @Query("SELECT * FROM password_info")
+    @Query("SELECT * FROM password_info ORDER BY title")
     fun getAll(): LiveData<List<PasswordInfo>>
 
-    @Query("SELECT id, title, url FROM password_info")
+    @Query("SELECT id, title, url FROM password_info ORDER BY title")
     fun getAllHomePassInfo(): LiveData<List<HomePasswordInfo>>
 
-    @Query("SELECT * FROM password_info WHERE title LIKE :query OR url LIKE :query")
+    @Query("SELECT * FROM password_info WHERE title LIKE :query OR url LIKE :query ORDER BY title")
     fun search(query: String): LiveData<List<PasswordInfo>>
 
     @Query("SELECT * FROM password_info WHERE id = :id")
